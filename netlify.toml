@@ -1,0 +1,17 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# (Opcional) Redirecionar tudo para index.js (caso SPA)
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
+
